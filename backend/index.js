@@ -1,6 +1,7 @@
 const express = require("express")
 const cors = require("cors")
 const connectDatabase = require("./database")
+const UserRoute = require("./routes/user")
 
 const Port = 8080
 
@@ -13,6 +14,8 @@ app.use(cors())
 app.get(('/'), (req,res) => {
     res.send("Welcome Guests")
 })
+
+app.use(UserRoute)
 
 
 connectDatabase()
