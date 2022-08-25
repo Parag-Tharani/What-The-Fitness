@@ -1,0 +1,22 @@
+.home{
+    /* width: 99vw; */
+    height: 90vh;
+    background-image: linear-gradient(to right, rgb(135, 8, 8), black);
+}
+
+.powered{
+    position: absolute;
+    margin-top: 15vh;
+    font-size: 26vw;
+    color: rgb(155, 45, 45);
+    font-family: 'Londrina Shadow', cursive;
+}
+
+.gym{
+    position: absolute;
+    margin-top: 50vh;
+    margin-left: 70vw;
+    font-size: 15vw;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+}

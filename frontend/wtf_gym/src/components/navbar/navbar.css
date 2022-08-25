@@ -1,0 +1,55 @@
+.parentNav{
+    position: sticky;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 10;
+    padding-top: 10px;
+    margin-top: -80px;
+    background-color: transparent;
+    transition: 0.5s ease-in ;
+}
+
+.childNav{
+    width: 600px
+}
+
+
+.logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    color: white;
+    padding: 5px;
+}
+
+.loginButton{
+    width: 70px;
+    height: 35px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: red;
+}
+
+.navLink{
+    cursor: pointer;
+    font-size: 17px;
+    color: rgba(212, 202, 202, 0.872);
+}
+
+.navLink:hover{
+    color: white;
+}
+
+.blackBack{
+    height: 80px;
+    background-color: black;
+    transition: 0.5s ease-in;
+}
+
+@media all and (max-width: 800px){
+    .childNav{
+        opacity: 0;
+        width: 0px;
+    }
+}
