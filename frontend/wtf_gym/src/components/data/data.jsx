@@ -9,13 +9,15 @@ export const Data = () => {
     const [gymData , setGymData] = React.useState([])
     const [cities, setCities] = React.useState([])
     const [city , setCity] = React.useState("")
-
+    const [loading, setLoading] = React.useState(false)
 
     React.useEffect(() => {
+        setLoading(true)
         fetch(`https://devapi.wtfup.me/gym/nearestgym?lat=30.325488815850512&long=78.0042384802231&city=${city}`)
         .then((res) => res.json())
         .then((data) => data.data.forEach((items) => {
             setGymData((e) => [...e, items])
+            setLoading(false)
         }))
         .catch((err) => console.log(err))
 
@@ -38,6 +40,12 @@ export const Data = () => {
 
     return (
         <>
+        {
+            loading?
+            <Box className="searchDiv">
+                <img alt="Loading..." src="https://wtfup.me/assets/loader.gif" style={{width:"150px", height:"150px", marginTop:"100px"}} />
+            </Box>
+            :
         <Box className="searchDiv">
             <Box>
                 <Box className="search flexDiv">
@@ -86,6 +94,7 @@ export const Data = () => {
                 </Box>
             </Box>
         </Box>
+}
         </>
     )
 }
